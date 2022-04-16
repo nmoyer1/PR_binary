@@ -19,6 +19,9 @@
 
 clc, clear all
 
+
+% Component 1 is 1-octanol
+% Component 2 is water
 %general constants
 
 % gas constant
@@ -26,6 +29,7 @@ R = 8.3145e-5; % [bar * m^3 / mol * K]
 
 %number of components
 n = 2;
+
 
 
 % Get user inputs and assign parameters for water and octanol

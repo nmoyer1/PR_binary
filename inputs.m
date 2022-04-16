@@ -16,7 +16,7 @@ function [P T z kij Tc Pc om feed_rate] = inputs;
 prompt_T = ['\n What is the flash drum  temperature in Kelvin? \n' ...
     'ca~ 373K to 468K >: '];
 
-prompt_frac_x1 = '\n What is the mole fraction of component one in the feed? >: '; 
+prompt_frac_x1 = '\n What is the mole fraction of 1-octanol in the feed? >: '; 
 
 prompt_feed_rate = '\n What is the feed rate in moles per minute? >: ';
 
@@ -37,18 +37,18 @@ kij = .06; % pg 441 sandler H2S and n-octane
 
 %omega
 
-om1 = .343;
+om1 = .592;  % Perry's table 2-164 1 heptanol
+om2 = .344; %Sandler Water
 
-om2 = .592;  % Perry's table 2-164 1 heptanol
 
 %Critical Values
+%Octanol
+Tc1 = 655; %K  NIST webbook
+Pc1 = 27; % NIST Webbook 1-octanol
 
-Tc1 = 647.3; % K SAndlaer p 254
-Tc2 = 655; %K  NIST webbook
-
-Pc1 = 220.48; %bar Sandler
-Pc2 = 27; % NIST Webbook 1-octanol
-
+%Water
+Tc2 = 647.3; % K SAndlaer p 254
+Pc2 = 220.48; %bar Sandler
 
 z = [z1 z2];
 kij = [kij 0 ; 0 kij];
