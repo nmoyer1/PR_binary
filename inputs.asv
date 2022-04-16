@@ -14,7 +14,7 @@ function [P T z kij Tc Pc om feed_rate] = inputs;
 
 
 prompt_T = ['\n What is the flash drum  temperature in Kelvin? \n' ...
-    'ca~ 373K to 468K >: '];
+    'ca~  >: '];
 
 prompt_frac_x1 = '\n What is the mole fraction of component one in the feed? >: '; 
 

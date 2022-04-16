@@ -41,5 +41,25 @@ n = 2;
     Z_phi_k(P, T, R,kap, ai, alpha ,bi, aT, xi_bi, aij, xi_xj_aij, x_aij, n );
 
 
-flash_vec = flash(z, n, k);
+% % initial guesses for vapor frac
+% y1 = .8;
+% y2 = .2;
+% 
+% % list x and y mole fractions for debugging
+% y  = [y1 y2];
+% z;
+x= [.5 .5];
+y= [.5 .5];
+L = ;
+V = 1;
+
+v = flash(z, k, n, x, y, L, V, feed_rate)
+
+
+
+% sums of gas and liquid phases for debugging (LL in the mathcad sheet)
+%check_y = sum(y)
+%check_x = sum(z)
+   
+
 
