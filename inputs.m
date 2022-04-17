@@ -36,8 +36,13 @@ T = input(prompt_T);
 kij = .06; % pg 441 sandler H2S and n-octane
 
 %omega
-
-om1 = .592;  % Perry's table 2-164 1 heptanol
+C1 = 144.11083 ;
+C2 = -13667.15667;
+C3 = -16.8261;
+C4 = 9.37e-18;
+C5 = 6;
+Pvap_C8OH = exp(C1 + C2/458.5 + C3*log(458.5) + C4^C5)*1e-5;
+om1 = -1 -log10(Pvap_C8OH/27)  % Perry's table 2-164 1 heptanol
 om2 = .344; %Sandler Water
 
 

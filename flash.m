@@ -11,12 +11,12 @@ soln = solve([eqn1, eqn2, eqn3], [x1, x2, L])
 double(soln.x1)
 double(soln.x2)
 double(soln.L)
-liq_split = double(soln.L(2))
+liq_split = double(soln.L(1))
 vap_split = 1-liq_split
 split_sum = liq_split + vap_split;
 
-C8OH_L = double(soln.x1(2))
-H2O_L = double(soln.x2(2))
+C8OH_L = double(soln.x1(1))
+H2O_L = double(soln.x2(1))
 %liq_sum = (acetone_L+acetonitrile_L);
 
 C8OH_V = C8OH_L * k(1)
